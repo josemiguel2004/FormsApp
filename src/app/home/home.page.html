@@ -7,25 +7,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item color="light">
-    <ion-label position="floating">Nome</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item color="light">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
-  <ion-item color="light" >
-    <ion-label position="floating" id="data">Data nascimento</ion-label>
-    <ion-input type="date"></ion-input>
-  </ion-item>
-  <ion-item color="light">
-    <ion-label position="floating">Senha</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-  <ion-item color="light">
-    <ion-label position="floating">Repita a Senha</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-  <ion-button expand="full" fill="outline" color="primary">Cadastrar-se</ion-button>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/cadastro">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
 </ion-content>

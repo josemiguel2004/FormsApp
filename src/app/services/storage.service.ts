@@ -30,4 +30,13 @@ export class StorageService {
   public async delete(key: string){
     return await this._storage?.remove(key);
   }
+
+  public  async getAll(){
+    const list = [];
+   await  this._storage.forEach((value, key, index) => {
+      list.push(value);
+    });
+
+    return list;
+  }
 }

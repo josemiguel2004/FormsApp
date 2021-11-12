@@ -9,40 +9,59 @@
 
 <ion-content>
 
-  <h1>Cadastro</h1>
+  <h4>Prezado Sr. {{usuario.nome}}</h4>
+  <ion-item>
+    <ion-label position="floating" class="ion-text-wrap">Nome:</ion-label>
+    <ion-input [(ngModel)]="usuario.nome"></ion-input>
+  </ion-item>
 
-  
+  <ion-item>
+    <ion-label position="floating"  class="ion-text-wrap">CPF:</ion-label>
+    <ion-input [(ngModel)]="usuario.cpf"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap">Telefone:</ion-label>
+    <ion-input [(ngModel)]="usuario.telefone"></ion-input>
+  </ion-item>
 
   <ion-item >
-    <ion-label position="floating">Nome</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label position="floating" class="ion-text-wrap">Data de Nascimento:</ion-label>
+    <ion-input  [(ngModel)]="usuario.dataNascimento"></ion-input>
   </ion-item>
-  <ion-item >
-    <ion-label position="floating">CPF</ion-label>
-    <ion-input ></ion-input>
+
+  <ion-item>
+    <ion-label position="floating" class="ion-text-wrap">E-mail:</ion-label>
+    <ion-input  [(ngModel)]="usuario.email"></ion-input>
   </ion-item>
-  <ion-item >
-    <ion-label position="floating" >Telefone</ion-label>
-    <ion-input ></ion-input>
+
+  <ion-item>
+    <ion-label position="floating" class="ion-text-wrap">Senha:</ion-label>
+    <ion-input type="password" [(ngModel)]="usuario.senha"> </ion-input>
   </ion-item>
-  <ion-item >
-    <ion-label position="floating">Data nascimento</ion-label>
-    <ion-input ></ion-input>
-  </ion-item>
-  <ion-item >
-    <ion-label position="floating">Email</ion-label>
-    <ion-input></ion-input>
+
+  <ion-item>
+    <ion-label position="floating" class="ion-text-wrap">Confirmar Senha:</ion-label>
+    <ion-input type="password" [(ngModel)]="cSenha"> </ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Senha</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Confirmar senha</ion-label>
-    <ion-input></ion-input>
+    <ion-textarea placeholder="Insira mais informações..."></ion-textarea>
   </ion-item>
 
-  <ion-button expend="block" routerLink="/home">VOLTAR</ion-button>
+  <br>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div>
+        <ion-button expand="block" color="dark" routerLink="/home">Voltar</ion-button></div>
+    </ion-col>
+    <ion-col>
+      <div>
+        <ion-button expand="block" color="success" (click)="salvar()">Salvar</ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
 
 </ion-content>
